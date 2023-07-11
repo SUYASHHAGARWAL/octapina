@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/static/CSS/footer.css">
     <link rel="stylesheet" href="/static/CSS/contact.css">
+    
 
-</head>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 <body>
     <header>
         <div class="header_top">
@@ -50,7 +53,7 @@
         </div>
 
     </header>
-    <h2>Contact Us {{message}}</h2>
+    <h2>Contact Us </h2>
     <div class="divi">
         <div class="query">
             <p>For Queries regarding the services we provide and for any help regarding technical issues during tests, feel free to get in touch. The Customer care / Tech Support team is ready to help you always. For personal, academic and conselling related doubts, kindly use our Discussion Forum, Doubts Section and Counsellor Appointment section respectively. Medical Issues are not entertained.</p>
@@ -159,7 +162,16 @@
                     <a>Disclaimers</a>
                 </div>
             </div>
-
+            <input type="text" name="" id="msgss" value="{{message}}" hidden>
     </section>
 </body>
 </html>
+<script>
+    let msg = document.getElementById('msgss').value
+    if(msg == 'ok')
+    Swal.fire("hello","Message sent","success")
+
+    else if(msg == 'error')
+    Swal.fire("WARNING","Message Failed","error")
+
+</script>

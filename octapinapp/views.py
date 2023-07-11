@@ -35,10 +35,13 @@ def SaveContactusdetails(req):
             if contactdata.is_valid():
                 contactdata.save()
                 print(contactdata)
-                return render(req,"contact.html",{'message':'Message sent'})
+                return render(req,"contact.html",{'message':'ok'})
+            else:
+                print("Else")
+                return render(req,"contact.html",{'message':'error'})
     except Exception as e:
-        print(e)
-        return render(req,"contact.html",{'message':'Message did not sent'})
+        print("Error",e)
+        return render(req,"home.html")
     
 @api_view(['GET','POST','DELETE'])
 def Signuppage(req):
@@ -90,9 +93,10 @@ def CheckUserlogin(req):
                 p = record[0]['id']
                 return render(req, 'Dashboard.html', {'message': 'Logged in successfully', 'record': record})
             else:
-                return HttpResponse("Missing mobile or password parameters.")
+                return render(req,'contact.html',{'message':'invalid mobile or password'})
     except Exception as e:
         print("error", e)
+        return redirect('/api/loginSignup',{'message':'No data found'})
 
 
 @api_view(['GET','POST','DELETE'])

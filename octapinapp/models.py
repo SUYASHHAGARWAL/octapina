@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Contact(models.Model):
-    username = models.CharField(max_length=120,blank=False,default='')
+    username = models.CharField(max_length=120,blank=False)
     email = models.CharField(max_length=50,blank=False,default='')
     mobile = models.CharField(max_length=14,blank=False,default='')
-    message = models.CharField(max_length=300,blank=False,default='')
+    message = models.CharField(max_length=300,blank=False)
 
 class NewUserData(models.Model):
     username = models.CharField(max_length=120,blank=False,default='')
