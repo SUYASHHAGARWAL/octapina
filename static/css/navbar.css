@@ -1,0 +1,229 @@
+:root{
+    --red: rgb(226, 42, 42);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 60%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    /* background: transparent; */
+    background-color: rgba(255, 254, 254, 0.837);
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: rgba(0,0,0,.3);
+}
+
+
+
+header .header_top {
+    width: 100%;
+    height: 45px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+header .header_top .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+header .header_top .contact-info a{
+    color: red;
+    margin-left: 2rem;
+
+}
+
+header .header_top .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px; 
+    max-width: 50%;
+    flex: 0 0 50%;
+    
+
+}
+
+header .header_top .social-icons i{
+    color: #fff;
+    margin-left: 0.5rem;
+}
+
+header .header_top .social-icons i:hover{
+    color: var(--red);
+}
+
+header .header_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+header .header_bottom .left img{
+    width: 22rem;
+
+}
+
+
+header .header_bottom .navbar a{
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    color: rgb(5, 5, 132);
+    font-weight: bolder;
+    
+}
+
+header .header_bottom .navbar a:hover{
+    color: var(--red);
+}
+
+header .header_bottom #toggler{
+    display: none;
+}
+
+header .header_bottom .fa-bars{
+    font-size: 3rem;
+    color: #fff;
+    background-color:darkblue;
+    border-radius: .5rem;
+    padding: .5rem .5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+
+}
+header .header_bottom .login_button a{
+    display: inline-block;
+    width: 15rem;
+    border-radius: 5rem;
+    background-color: red;
+    color: white;
+    padding: .9rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+
+header .header_bottom .login_button a:hover{
+    background-color: darkblue;
+    transform: scale(1.1);
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+        
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    body{
+        background-position: left;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+    header .header_top{
+        display: none;
+    }
+
+    header .header_bottom .fa-bars{
+        display: block;
+    }
+
+    header .header_bottom .navbar{
+        position: absolute;
+        top: 100%; left: 0; right:0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+    }
+
+    header .header_bottom #toggler:checked ~ .navbar{
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    
+
+    }
+
+    header .header_bottom .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+}
+
+@media(max-width:768px){
+    header .header_bottom .fa-bars{
+        display: block;
+    }
+
+    header .header_bottom .navbar{
+        position: absolute;
+        top: 100%; left: 0; right:0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .header_bottom #toggler:checked ~ .navbar{
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    
+
+    }
+
+    header .header_bottom .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+}
+
+@media(max-width: 450px){
+
+    html{
+        font-size: 50%;
+        
+    }
+}

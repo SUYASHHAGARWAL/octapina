@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Biomentors Online</title>
+    <!-- <link rel="stylesheet" href="p.css"> -->
+    <link rel="stylesheet" href="/static/CSS/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="phone.css"> -->
+    <link rel="stylesheet" href="/static/CSS/navbar.css">
+    <link rel="stylesheet" href="/static/CSS/footer.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <script>
+        //pswlogin
+        $(document).ready(function () {
+            
+          
+            $('#pswlogin').click(function () {
+                var phn = $('#mobile').val();
+                var psw = $('#password').val();
+                
+                console.log(phn,psw)
+                $.getJSON('http://localhost:8000/api/datainsession',{mobile:phn,password:psw},function(data){ 
+                    window.location.href = `http://localhost:8000/api/checkuserlogin?mobile=${phn}&password=${psw}`
+            }) 
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header_top">
+            <div class="contact-info">
+                <a href="#" class="fas fa-phone"></a>
+                <p>Phone: 8878899556</p>
+                <a href="#" class="fas fa-envelope"></a>
+                <p>Email: contact@bioticclasses.com</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="header_bottom">
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <div class="left">
+                <a href="/api/biotichomepage"><img src="/static/Images/biotic_logo.png" alt=""></a>
+            </div>
+            <nav class="navbar">
+                <!-- <a href="#">Batch Section</a>
+                <a href="#">Features</a> -->
+                <a target="_blank" href="/api/resultspage">Results</a>
+                <a target="_blank" href="/api/testimonialspage">Testimonials</a>
+                <a  target="_blank" href="/api/aboutuspage">About Us</a>
+                <a  target="_blank" href="/api/contactuspage">Contact Us</a>
+            </nav>
+
+            <div class="login_button">
+                <a href="/api/loginSignup" class="btn-1">LOGIN/SIGNUP</a>
+                
+            </div>
+        </div>
+
+    </header>
+    <div class="login-signup-page">
+        <div class="login_signup_box" id="login-box1">
+            <div class="login-box">
+                <div class="mail-login">
+                    <h4>Log in With</h4>
+                    <button class="gmail">
+                        <img src="/static/Images/google.png" alt="">
+                        Gmail
+                    </button>
+                </div>
+                <hr>
+                <div class="credentials">
+                    <h4>or Log in with</h4>
+                    <div class="change-btn-class">
+                        <button class="change_btns activebtn" id="pwd">Password</button>
+                        <button class="change_btns noneactive" id="otp">OTP</button>
+                    </div>
+    
+                    <div class="credential-area" id="area1">
+                        <input type="text"  placeholder="Contact No. / Email" id="mobile" required></input>
+                        <input type="password" placeholder="Password" id="password" required></input>
+                        <button class="login-btn" id="pswlogin">Login</button>
+                    </div>
+                    <div class="credential-area" id="area2">
+                        <input type="number" placeholder="Contact No." required></input>
+                        <button class="login-btn" id="otplogin">Login</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <button class="forget">Forget Password?</button>
+        <h5 class="existinguser">New User? SignIn</h5>
+        <div class="login_signup_box" id="sign-in-box">
+            <div class="signup-box">
+                <h4>Register as New User</h4>
+                <form action="/api/Sigupinfo" method="post">
+                    <div class="signin-area">
+                        <div class="input-box">
+                            <label for="name" class="lbl">Full Name</label>
+                            <input type="text" name="username" id="username" placeholder="Name Surname" required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="email" class="lbl">Email</label>
+                            <input type="email" name="useremail" id="useremail" placeholder="Enter email" required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="phone" class="lbl">Phone</label>
+                            <input type="number" name="usermobile" id="usermobile" placeholder="Enter phone" required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="city" class="lbl">City</label>
+                            <input type="text" name="usercity" id="usercity" placeholder="Enter city" required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="dob" class="lbl">Date of Birth</label>
+                            <input type="date" name="userdob" id="userdob" placeholder="Enter Date of birth (DD/MM/YYYY)"
+                                required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="gender" class="lbl">Gender</label>
+                            <select name="usergender" id="usergender" required>Select your gender
+                                <option value="Male" id="m">Male</option>
+                                <option value="Female" id="f">Female</option>
+                                <option value="others" id="others">Others</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="gname" class="lbl">Guardian's Name</label>
+                            <input type="text" name="guardiansname" id="guardiansname" placeholder="Enter guardian's name"
+                                required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="gphone" class="lbl">Guardian's Phone</label>
+                            <input type="number" name="guardiansphone" id="guardiansphone" placeholder="Enter guardian's phone"
+                                required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="school" class="lbl">School</label>
+                            <input type="text" name="userschool" id="userschool" placeholder="Enter institution"
+                                required></input>
+                        </div>
+                        <div class="input-box">
+                            <label for="class" class="lbl">Class</label>
+                            <select name="userclass" id="userclass" required>Select your gender
+                                <option value="Dropper" id="dropper">Dropper</option>
+                                <option value="12th" id="twelvth">12th</option>
+                                <option value="11th" id="eleventh">11th</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="sign-in">Sign Up</button>
+                </form>
+                <h5 id="login">Already a user? Login</h5>
+            </div>
+        </div>
+    </div>
+    <div class="forget-password-container none">
+        <div class="forget-password">
+            <button class="close-btn">X</button>
+            <h4>Reset password for your account</h4>
+            <input type="text" placeholder="Enter your registered email id / contact no." required></input>
+            <button class="request-btn">Request for Reset</button>
+        </div>
+    </div>
+
+    </div>
+    <section class="footer">
+        <!-- <div class="floatingbox">START YOUR NEET COMMANDO TRAINING <br id="poppy">WITH US</BR></div> -->
+            <div class="box-container">
+
+                <div class="b">
+
+                    <div class="floating_container">
+                        <div class="floatingbox">
+                            <h3>START YOUR NEET COMMANDO TRAINING WITH US</h3>
+                            <button>SIGNUP</button>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <div class="box">
+                    <img src="/static/Images/biotic_logo.png" class="logo">
+                    <p>Learning is a Dynamic process that extends beyond the classroom. So, why restrict yourself to
+                        traditional settings? BIOMENTORS is an exclusive online institute for NEET Medical Entrance
+                        examination. We are passionate about quality education.
+                    </p>
+                    <div class="row">
+                        <h3>Follow Us On</h3>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    
+                    </div>
+                    
+                </div>
+        
+                <div class="box" id="box1">
+                    <h3>Quick Links</h3>
+                    <a>Home</a>
+                    <a>About Us</a>
+                    <a>In the NEWS</a>
+                    <a>Fees Package</a>
+                    <a>Features</a>
+                    <a>Careers</a>
+                    <a>Contact Us</a>
+                </div>
+                <div class="box">
+                    <h3>Other Links</h3>
+                    <a>Help?</a>
+                    <a>Our Results</a>
+                    <a>Testimonials</a>
+                    <a>Privacy Policy</a>
+                    <a>Terms & Conditions</a>
+                    <a>Disclaimers</a>
+                </div>
+            </div>
+
+    </section>
+    
+</body>
+<script src="/static/JavaScript/login.js"></script>
+
+</html>

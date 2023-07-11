@@ -1,0 +1,96 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+.testimonial-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 20rem;
+  }
+  
+  .testimonials-header {
+    margin-bottom: 2rem;
+  }
+  
+  .testimonials-header p {
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .testimonials-header h1 {
+    font-family: "Noto Serif", serif;
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  
+  .testimonials-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feedback-card {
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 35rem;
+  }
+  
+  .feedback-card i {
+    font-size: 2.5rem;
+    color: gold;
+  }
+  
+  .feedback-card p {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  .feedback-card hr {
+    width: 40px;
+    margin: auto;
+    color: #767268;
+  }
+  
+  .feedback-card img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    border: 1px solid #1a2c50;
+  }
+  
+  .feedback-card .name {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #767268;
+    transition: 0.3s;
+  }
+  
+  .feedback-card .name:hover {
+    color: #1a2c50;
+  }
+
+  @media screen and (max-width: 768px) {
+    .testimonials-section {
+      grid-template-columns: 1fr; /* Display as a single column on smaller screens */
+      gap: 3rem; /* Reduce the gap between feedback cards */
+    }
+  
+    .testimonial-container {
+      margin-top: 10rem; /* Decrease the top margin on smaller screens */
+    }
+    
+    .testimonials-header h1 {
+      font-size: 3rem; /* Decrease the font size of the heading on smaller screens */
+    }
+  }

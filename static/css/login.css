@@ -1,0 +1,527 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 60%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body{
+    background: url('/static/Images/about.jpg') no-repeat;
+    background-size: cover;
+}
+.login-signup-page{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    margin-top: 20rem;
+}
+
+.login_signup_box{
+    width: 40rem;
+    background: rgb(248, 248, 248);
+    height: 50rem;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.existinguser{
+    position: relative;
+    top: -0.4rem;
+    left: -13.4rem;
+    color: gray;
+    font-size: 12px;
+}
+
+.existinguser:hover{
+    color: #5603ad;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+.forget{
+    position: relative;
+    top: 1rem;
+    right: -15rem;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+}
+
+.forget:hover{
+    color: #5603ad;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mail-login{
+    background-color: transparent;
+    padding: 2rem;
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+}
+
+.mail-login h4{
+    font-weight: lighter;
+    margin-bottom: 2.7rem;
+}
+
+.gmail img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.gmail{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    width: 10rem;
+    padding-left: 0.5rem;
+    color: #2672cf;
+    font-size: 14px;
+    font-weight: 600;
+    height: 4.8rem;
+}
+
+.gmail:hover{
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    color: rgb(29, 1, 1);
+}
+
+.credentials{
+    position: relative;
+    top: 2.5rem;
+    background-color: transparent;
+    padding: 2rem;
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+}
+
+hr{
+    color: aliceblue;
+}
+
+.credentials h4{
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.change_btns{
+    padding: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+}
+
+#pwd{
+    margin-right: -6px;
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0,0,0,.15);
+    border: none;
+}
+
+#otp{
+    border-left: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0,0,0,.15);
+    border: none;
+}
+
+.activebtn{
+    color: white;
+    background: linear-gradient(87deg,#11cdef 0,#1171ef 100%)!important;
+}
+
+.noneactive{
+    background-color: white;
+    color: blue;
+}
+
+.credential-area{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.credential-area input{
+    width: 20rem;
+    height: 1rem;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    outline: none;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 15px;
+    margin: 15px;
+}
+
+.login-btn{
+    font-size: 0.875rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px;
+    color: white;
+    font-weight: 600;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+    border-radius: 4px;
+    background: linear-gradient(87deg, rgb(86, 3, 173) 0px, rgb(157, 3, 173) 100%) !important;
+    width: 10rem;
+    height: 4rem;
+    font-size: 12px;
+}
+
+#area1{
+    z-index: 100;
+}
+
+#area2{
+    position: relative;
+    top: 0rem;
+    display: none;
+}
+
+.signin-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 12px 0px;
+    width: 20rem;
+}
+
+.input-box input{
+    width: 100%;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    margin-top: 5px;
+    background: transparent;
+    font-size: 11px;
+}
+
+.input-box label{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(73, 70, 70);
+    font-family: Poppins, sans-serif;
+    margin-bottom: 8px;
+}
+
+.signin-container h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.sign-in{
+    width: 20rem;
+    background-color: black;
+    color: white;
+    height: 3.8rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 115px;
+    margin-top: 25px;
+}
+
+#sign-in-box{
+    width: 54rem;
+    padding: 5rem;
+    height: 65rem;
+    transform: rotateY(180deg);
+    display: none;
+    margin-top: -60px;
+}
+
+.signup-box h4{
+    text-align: center;
+    margin: 1.4rem 0rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.input-box select{
+    width: 100%;
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    margin-top: 5px;
+    background:transparent;
+    font-size: 12px;
+}
+
+.signup-box h5{
+    text-align: center;
+    margin: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: blue;
+    transition: .3s;
+    font-size: 14px;
+}
+
+.signup-box h5:hover{
+    cursor: pointer;
+    color: #5603ad;
+    text-decoration: dashed;
+}
+
+.forget-password-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(90, 90, 90, 0.5);
+    z-index: 9999;
+}
+
+.forget-password{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 30rem;
+    background-color: rgb(241, 228, 228);
+    align-items: center;
+    padding: 20px;
+}
+
+.forget-password h4{
+    margin-bottom: 5rem;
+    font-size: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.close-btn{
+    position: relative;
+    left: 13.3rem;
+    width: 20px;
+    border-radius: 50%;
+    padding: 2px;
+    background: none;
+    color: #561616;
+    border: none;
+    font-size: 20px;
+    top: -1rem;
+    cursor: pointer;
+}
+
+.forget-password input{
+    width: 26rem;
+    padding: 15px;
+    font-size: 14px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #d5d5d5;
+    margin-bottom: 20px;
+}
+
+.request-btn{
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(87deg,#5603ad 0,#9d03ad 100%)!important;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    color: white;
+    font-weight: 600;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 14px;
+    width: 15rem;
+}
+
+.none{
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 12px;
+    }
+  
+    /* Login/Signup Page */
+  
+    .login-signup-page {
+      margin-top: 10rem;
+    }
+  
+    .login_signup_box {
+      width: 90%;
+      height: auto;
+    }
+  
+    .existinguser,
+    .forget {
+      font-size: 10px;
+    }
+  
+    .mail-login h4 {
+      margin-bottom: 1.5rem;
+    }
+  
+    .gmail img {
+      width: 2rem;
+      height: 2rem;
+    }
+  
+    .gmail {
+      width: 8rem;
+      height: 3.5rem;
+      font-size: 12px;
+    }
+  
+    .credentials {
+      top: 1.5rem;
+    }
+  
+    .credentials h4 {
+      margin-bottom: 1rem;
+    }
+  
+    .change_btns {
+      padding: 10px;
+      font-size: 10px;
+      margin-bottom: 0.8rem;
+    }
+  
+    .credential-area input {
+      width: 18rem;
+      height: 1.8rem;
+      padding: 10px;
+      font-size: 10px;
+      margin: 10px;
+    }
+  
+    .login-btn {
+      width: 8rem;
+      height: 3rem;
+      font-size: 10px;
+    }
+  
+    .signin-container h2 {
+      font-size: 18px;
+    }
+  
+    .sign-in {
+      width: 18rem;
+      height: 3rem;
+      font-size: 12px;
+      margin-left: 13rem;
+      margin-top: 1rem;
+    }
+  
+    .input-box label {
+      font-size: 12px;
+    }
+  
+    .input-box input,
+    .input-box select {
+      height: 1.8rem;
+      font-size: 10px;
+    }
+  
+    .signup-box h4 {
+      font-size: 16px;
+      margin: 1rem 0rem;
+    }
+  
+    .signup-box h5 {
+      margin: 1rem;
+      font-size: 12px;
+    }
+  
+    /* Forget Password Popup */
+  
+    .forget-password {
+      width: 90%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .forget-password h4 {
+      margin-bottom: 3rem;
+      font-size: 1.4rem;
+    }
+  
+    .close-btn {
+      left: 9.5rem;
+      top: -0.8rem;
+      font-size: 16px;
+    }
+  
+    .forget-password input {
+      width: 22rem;
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+
+  #pswlogin{
+    margin-left: 6rem;
+  }
+
+  #otplogin{
+    margin-left: 6rem;
+
+  }

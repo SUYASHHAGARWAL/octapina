@@ -14,8 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path,re_path
+from octapinapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    re_path(r'^api/biotichomepage',views.LandingPage),
+    re_path(r'^api/contactuspage',views.ContactPage),
+    re_path(r'^api/contactuspage',views.ContactPage),
+    re_path(r'^api/contactusdetails',views.SaveContactusdetails),
+    re_path(r'^api/loginSignup',views.Signuppage),
+    re_path(r'^api/Sigupinfo',views.Signupinfo),
+    re_path(r'^api/datainsession',views.session),
+    re_path(r'^api/checkuserlogin',views.CheckUserlogin),
+    re_path(r'^api/aboutuspage',views.AboutUsPage),
+    re_path(r'^api/testimonialspage',views.TestimonialsPage),
+    re_path(r'^api/resultspage',views.ResultsPage),
+
+
 ]
