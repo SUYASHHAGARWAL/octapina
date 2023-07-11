@@ -2,13 +2,13 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url('/static/Images/main_bg3.jpg') no-repeat center center/cover;
+    background: url('/Static/Images/main_bg3.jpg') no-repeat center center/cover; 
     background-size: cover;
     background-position: center;        
     margin-top: 2rem;
     /* height: 100vh; */
-    
 
+    
 }
 
 .achiever .row{
@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     gap: 4rem;
     align-items: center;
-    background-color: rgba(255, 254, 254, 0.361);
+    background-color: rgba(255, 254, 254, 0.164);
     padding: 0rem;
     margin-left: 2rem;
     margin-top: 2rem;
