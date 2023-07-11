@@ -10,7 +10,7 @@
 
 .floating_container{
     position: relative;
-    background: url('/static/Images/main_bg3.jpg');
+    background: url('/Static/Images/main_bg3.jpg');
     padding: 40px 60px;
     overflow: hidden;
     box-shadow: 0 30px 60px 0 rgba(18, 10, 10, 0.1);
