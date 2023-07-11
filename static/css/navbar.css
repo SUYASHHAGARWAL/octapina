@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'poppins',sans-serif;
     outline: none;
     border: none;
     text-decoration: none;
@@ -24,8 +24,8 @@ html{
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
-    /* background: transparent; */
-    background-color: rgba(255, 254, 254, 0.837);
+    background: transparent;
+    /* background-color: rgba(255, 254, 254, 0.837); */
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
@@ -84,6 +84,8 @@ header .header_bottom {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
+    background: transparent;
+    transition: .5s;
 }
 
 header .header_bottom .left img{
@@ -135,6 +137,8 @@ header .header_bottom .login_button a:hover{
     background-color: darkblue;
     transform: scale(1.1);
 }
+
+
 
 @media(max-width:991px){
     html{
