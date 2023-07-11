@@ -21,7 +21,7 @@ body{
   }
   
   .testimonials-header h1 {
-    font-family: "Noto Serif", serif;
+    font-family: 'poppins',sans-serif;
     font-size: 4rem;
     font-weight: 900;
   }
