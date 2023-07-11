@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'poppins',sans-serif;
     outline: none;
     border: none;
     text-decoration: none;
@@ -95,7 +95,7 @@ header .header_bottom .navbar a{
     font-size: 1.5rem;
     padding: 0 1.5rem;
     color: rgb(5, 5, 132);
-    font-weight: bolder;
+    font-weight: bold;
     
 }
 
@@ -139,7 +139,7 @@ header .header_bottom .login_button a:hover{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url('/static/Images/main_bg8.png') no-repeat;
+    background: url('/Static/Images/main_bg8.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -171,6 +171,7 @@ header .header_bottom .login_button a:hover{
     font-size: 2rem;
 
 }
+
 
 .home .content a{
     display: inline-block;
@@ -227,8 +228,8 @@ header .header_bottom .login_button a:hover{
 }
 
 .home .float_container span{
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: bolder;
 
 }
 
@@ -258,9 +259,9 @@ header .header_bottom .login_button a:hover{
     margin-left: 8rem;
     margin-top: 5rem;
     width: 200px;
-    animation: float_boxnew 8s;
+    animation: float_boxnew 10s;
     animation-iteration-count: infinite;
-    transition: animation 8s;
+    transition: animation 10s;
     position: relative;
     box-shadow: 0 8px 15px rgba(255, 173, 72, 0.85);
 }
@@ -304,7 +305,7 @@ header .header_bottom .login_button a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/static/Images/main_bg3.jpg') no-repeat center center/cover;
+    background: url('/Static/Images/main_bg3.jpg') no-repeat center center/cover;
     margin: 2rem;
     margin-top: 1rem;
     padding: 1rem;
@@ -320,7 +321,7 @@ header .header_bottom .login_button a:hover{
 .bottom-banner p {
     font-size: 2rem;
     color: #ffffff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'poppins',sans-serif;
     font-weight: bolder;
   }
 
