@@ -23,11 +23,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header id="header1">
         <div class="header_top">
             <div class="contact-info">
                 <a href="#" class="fas fa-phone"></a>
@@ -50,7 +52,7 @@
                 <a href="/api/biotichomepage"><img src="/static/Images/biotic_logo.png" alt=""></a>
             </div>
             <nav class="navbar">
-                <a href="#">Batch Section</a>
+                <a id="batch-link">Batch Section</a>
                 <a href="#">Features</a>
                 <a target="_blank" href="/api/resultspage">Results</a>
                 <a target="_blank" href="/api/testimonialspage">Testimonials</a>
@@ -131,7 +133,7 @@
                             </div>
                             <div class="image-content">
                                 <h3>Akansha dixit</h3>
-                                <span>datia</span>
+                                <span>Datia Medical College</span>
                             </div>
                         </div>
                     </div>
@@ -142,8 +144,8 @@
                                 <img src="/static/Images/pic-2.jpg">
                             </div>
                             <div class="image-content">
-                                <h3>Akansha dixit</h3>
-                                <span>datia</span>
+                                <h3>Anushi Singhal</h3>
+                                <span>Shyam Shah Medical College REWA</span>
                             </div>
                         </div>
                     </div>
@@ -154,8 +156,8 @@
                                 <img src="/static/Images/pic-3.jpg">
                             </div>
                             <div class="image-content">
-                                <h3>Akansha dixit</h3>
-                                <span>datia</span>
+                                <h3>Aryan Shrivastav</h3>
+                                <span>Datia Medical College</span>
                             </div>
                         </div>
                     </div>
@@ -166,8 +168,8 @@
                                 <img src="/static/Images/pic-4.jpg">
                             </div>
                             <div class="image-content">
-                                <h3>Akansha dixit</h3>
-                                <span>datia</span>
+                                <h3>Deeksha Agarwal</h3>
+                                <span>Mahatma Gandhi Medical college Indore</span>
                             </div>
                         </div>
                     </div>
@@ -178,25 +180,13 @@
                                 <img src="/static/Images/pic-5.jpg">
                             </div>
                             <div class="image-content">
-                                <h3>Akansha dixit</h3>
-                                <span>datia</span>
+                                <h3>Dr. Deshraj Rajpoot</h3>
+                                <span>Medical Officer</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="box">
-                        <div class="inner_photo">
-                            <div class="image">
-                                <img src="/static/Images/pic-6.jpg">
-                            </div>
-                            <div class="image-content">
-                                <h3>Akansha dixit</h3>
-                                <span>datia</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                    
                 <img src="/static/Images/forward.png" id="nextBtn">
 
             </div>
@@ -205,22 +195,25 @@
     </section>
 
     <section class="feature-section">
+
+
         <div class="feature-photu">
-            <img src="/static/Images/topper.png" alt="">
-            <div class="float-box">
-                <a href="">
-                    <i class="fa fa-youtube-play"></i>
-                </a>
-                <div class="text">Watch Us!</div>
-            </div>
+            <img src="/Static/Images/topper.png" alt="">
+
         </div>
+
+        <div class="float_box">
+            <a href=""><i class="fa fa-youtube-play"></i></a>
+            <div class="text">Watch Us!</div>
+        </div>
+
         <div class="feature-content">
             <h3>OUR FEATURES</h3>
             <h2>Join the Best Online Classes for NEET!</h2>
             <div class="qualities">
                 <div class="core-quality">
                     <div class="core-quality-icon" id="icon1">
-                        <img src="/static/Images/feature-icon-1.png" alt="">
+                        <img src="/Static/Images/feature-icon-1.png" alt="">
                     </div>
                     <div class="core-quality-content">
                         <h3>Ninja tranining for NEET</h3>
@@ -230,7 +223,7 @@
                 </div>
                 <div class="core-quality">
                     <div class="core-quality-icon" id="icon2">
-                        <img src="/static/Images/feature-icon-2.png" alt="">
+                        <img src="/Static/Images/feature-icon-2.png" alt="">
                     </div>
                     <div class="core-quality-content">
                         <h3>Best Atmosphere and Teaching </h3>
@@ -240,7 +233,7 @@
                 </div>
                 <div class="core-quality">
                     <div class="core-quality-icon" id="icon3">
-                        <img src="/static/Images/feature-icon-3.png" alt="">
+                        <img src="/Static/Images/feature-icon-3.png" alt="">
                     </div>
                     <div class="core-quality-content">
                         <h3>Achieve the height of success </h3>
@@ -250,6 +243,8 @@
                 </div>
             </div>
         </div>
+
+
     </section>
 
     <section class="testimonials">
@@ -515,5 +510,6 @@
 </body>
 
     <script src="/static/JavaScript/app.js"></script>
+     <script src="/Static/JavaScript/navbar.js"></script>
 
 </html>
