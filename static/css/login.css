@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'poppins',sans-serif;
     outline: none;
     border: none;
     text-decoration: none;
@@ -18,7 +18,7 @@ html{
 }
 
 body{
-    background: url('/static/Images/about.jpg') no-repeat;
+    background: url('/Static/Images/about.jpg') no-repeat;
     background-size: cover;
 }
 .login-signup-page{
@@ -61,8 +61,6 @@ body{
     text-decoration: underline;
     cursor: pointer;
 }
-
-
 
 .forget{
     position: relative;
@@ -246,12 +244,12 @@ hr{
     font-size: 14px;
     font-weight: 500;
     color: rgb(73, 70, 70);
-    font-family: Poppins, sans-serif;
+    font-family: 'poppins',sans-serif;
     margin-bottom: 8px;
 }
 
 .signin-container h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins',sans-serif;
 }
 
 .sign-in{
@@ -280,7 +278,7 @@ hr{
 .signup-box h4{
     text-align: center;
     margin: 1.4rem 0rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins',sans-serif;
     font-size: 20px;
 }
 
@@ -298,7 +296,7 @@ hr{
 .signup-box h5{
     text-align: center;
     margin: 1.4rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins',sans-serif;
     font-weight: lighter;
     color: blue;
     transition: .3s;
@@ -337,7 +335,7 @@ hr{
 .forget-password h4{
     margin-bottom: 5rem;
     font-size: 1.7rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins',sans-serif;
     font-weight: 300;
 }
 
@@ -515,13 +513,4 @@ hr{
       padding: 10px;
       font-size: 12px;
     }
-  }
-
-  #pswlogin{
-    margin-left: 6rem;
-  }
-
-  #otplogin{
-    margin-left: 6rem;
-
   }
