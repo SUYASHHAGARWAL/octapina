@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url('/Static/Images/main_bg3.jpg') no-repeat center center/cover; 
+    background: url('/static/Images/main_bg3.jpg') no-repeat center center/cover; 
     background-size: cover;
     background-position: center;        
     margin-top: 2rem;

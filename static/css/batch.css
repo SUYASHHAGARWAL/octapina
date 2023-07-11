@@ -7,7 +7,7 @@
     align-items: center;
     overflow: hidden;
     font-family: 'poppins',sans-serif;
-    background: url('/Static/Images/main_bg7.png') no-repeat center center/cover;
+    background: url('/static/Images/main_bg7.png') no-repeat center center/cover;
     margin-top: 2rem;
 }
 .batch-container h3{

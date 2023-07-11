@@ -139,7 +139,7 @@ header .header_bottom .login_button a:hover{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url('/Static/Images/main_bg8.png') no-repeat;
+    background: url('/static/Images/main_bg8.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -305,7 +305,7 @@ header .header_bottom .login_button a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/Static/Images/main_bg3.jpg') no-repeat center center/cover;
+    background: url('/static/Images/main_bg3.jpg') no-repeat center center/cover;
     margin: 2rem;
     margin-top: 1rem;
     padding: 1rem;

@@ -18,7 +18,7 @@ html{
 }
 
 body{
-    background: url('/Static/Images/about.jpg') no-repeat;
+    background: url('/static/Images/about.jpg') no-repeat;
     background-size: cover;
 }
 .login-signup-page{
