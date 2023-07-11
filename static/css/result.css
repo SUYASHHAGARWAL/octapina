@@ -1,20 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-}
-
-html{
-    font-size: 60%;
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    overflow-x: hidden;
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .result-area{
@@ -26,6 +14,7 @@ html{
     height: 30rem;
     /* background-color: rebeccapurple; */
     margin: 25rem 0rem;
+    margin-bottom: 20rem;
 }
 .result-area h2{
     font-size: 50px;
@@ -72,4 +61,198 @@ html{
     background-color: #d00000;
     border: 2px solid #d00000 ;
     box-shadow: 0 8px 15px rgba(255, 3, 3, 0.55);
+}
+
+.sucess-stories{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'poppins',sans-serif;
+    background-color: #e6d6cb78;
+    margin-top: 2rem;
+}
+.sucess-stories h3{
+    font-size: 20px;
+    line-height: 20px;
+    color:rgb(150, 150, 150);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.sucess-stories h2{
+    text-align: center;
+    font-size: 50px;
+    line-height: 65px;
+    font-weight: 800;
+    padding-bottom: 25px;
+    padding-top: 12px;
+    color: #204056;
+}
+.story-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.story-box{
+    width: 45rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(205, 205, 205);
+    margin: 28px;
+    height: 44rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background-color: rgb(250, 246, 240);
+}
+.image-part{
+    width: 100%;
+    position: relative;
+    height: 30rem;
+}
+.image-part img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    height: 30rem;
+}
+
+.over-img-part{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+}
+.over-img-part:hover{
+    opacity: 1;
+}
+
+.over-img-part>*{
+    transform: translateY(25px);
+    transition: 0.6s;
+}
+.over-img-part>*:hover{
+    transform: translateY(0px);
+}
+.over-img-part h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.toppers-data h2{
+    font-size: 25px;
+    font-weight: 800;
+    color: #036961;
+    padding-bottom: 0;
+}
+.toppers-data span{
+    color: gray;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.toppers-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .result-area {
+        margin: 10rem 0rem;
+        margin-bottom: 15rem;
+        height: 105rem;
+    }
+
+    .result-box {
+        width: 90%;
+        padding: 20px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .sucess-stories {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        /* margin-top: 50rem; */
+    }
+
+    .story-box {
+        width: 90%;
+        height: auto;
+        margin: 20px;
+    }
+
+    .image-part {
+        height: 20rem;
+    }
+
+    .image-part img {
+        height: 20rem;
+    }
+
+    .over-img-part {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .result-area {
+        margin: 5rem 0rem;
+        margin-bottom: 10rem;
+        height: 115rem;
+    }
+
+    .result-box {
+        width: 90%;
+        padding: 15px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .sucess-stories {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /* margin-top: 50rem; */
+    }
+
+    .story-box {
+        width: 90%;
+        height: auto;
+        margin: 10px;
+    }
+
+    .image-part {
+        height: 15rem;
+    }
+
+    .image-part img {
+        height: 15rem;
+    }
+
+    .back-video{
+        bottom: -340px;
+    }
 }
