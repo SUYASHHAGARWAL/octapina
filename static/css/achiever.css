@@ -1,287 +1,190 @@
 .achiever{
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    background: url('/static/Images/main_bg3.jpg') no-repeat center center/cover; 
-    background-size: cover;
-    background-position: center;        
-    margin-top: 2rem;
-    /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url('/static/Images/main_bg14.png') no-repeat center center/cover; 
+  background-size: cover;
+  background-position: center;        
+  margin-top: 2rem;
+  /* height: 100vh; */
 
-    
+  
 }
 
 .achiever .row{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
-    align-items: center;
-    background-color: rgba(255, 254, 254, 0.164);
-    padding: 0rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
-    border-radius: 2rem;
-    width: 97%;
-    
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+  background-color: rgba(255, 254, 254, 0.164);
+  padding: 0rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  width: 97%;
+  
 }
 
 .achiever .row .inner_content{
-    display: flex;
-    flex-direction: column;
-    /* line-height: 4rem; */
-    gap: 2rem;
-    max-width: 50rem;
-    margin-top: 5rem;
-    margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  /* line-height: 4rem; */
+  gap: 2rem;
+  max-width: 50rem;
+  margin-top: 5rem;
+  margin-left: 10rem;
 
 
 }
 .achiever .row .inner_content h3{
-    font-size: 6rem;
-    font-weight: bold;
-    color: rgb(0, 23, 85);
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgb(0, 23, 85);
+  margin-top: -2rem;
 }
 
 .achiever .row .inner_content span{
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: rgb(255, 252, 252);
-    font-style: italic;
+font-size: 3rem;
+font-weight: bold;
+color: rgb(10 10 10 / 73%);
+font-style: italic;
+
 
 }
 
 
 .achiever .row .photo_wrap{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 10%;
+
 
 }
 
 .achiever .row .photo_wrap .photos{
-    width: 100%;
-    max-width: 350px;
-    height: 380px;
-    display: flex;
-    overflow-x: scroll;
+  width: 100%;
+  max-width: 350px;
+  height: 380px;
+  display: flex;
+  overflow-x: scroll;
 }
 
 .achiever .row .photo_wrap .photos .box{
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto ;
-    grid-gap: 10px;
-    padding: 10px;
-    flex: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto ;
+  grid-gap: 10px;
+  padding: 10px;
+  flex: none;
 
 }
 
 .achiever .row .photo_wrap .photos::-webkit-scrollbar{
-    display: none;
+  display: none;
 }
 
 .achiever .row .photo_wrap #backBtn {
-    width: 30px;
-    cursor: pointer;
-    /* padding-left: 10px; */
-    /* margin: 40px; */
+  width: 30px;
+  cursor: pointer;
+  /* padding-left: 10px; */
+  /* margin: 40px; */
 
 }
 
 .achiever .row .photo_wrap #nextBtn{
-    width: 30px;
-    cursor: pointer;
-    padding-left: -20px;
-    /* margin: 40px; */
+  width: 30px;
+  cursor: pointer;
+  padding-left: -20px;
+  /* margin: 40px; */
 
 }
 
 .achiever .row .photo_wrap .photos .box .inner_photo{
-    flex: 1 1 30rem;
-    box-shadow: 1rem .5rem rgba(0,0,0,.1);
-    border-radius: 3rem 2rem;
-    padding: 3rem 2rem;
-    border: .1rem solid rgba(0,0,0,.1);
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.851);
+  flex: 1 1 30rem;
+  box-shadow: 1rem .5rem rgba(0,0,0,.1);
+  border-radius: 3rem 2rem;
+  padding: 3rem 2rem;
+  border: .1rem solid rgba(0,0,0,.1);
+  position: relative;
+  background-color: rgb(212 204 255 / 26%);
+  height: 33rem;
 }
 
 .achiever .row .photo_wrap .photos .box .inner_photo .image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 .achiever .row .photo_wrap .photos .box .inner_photo .image img{
-    border-radius: 2rem;
+  border-radius: 2rem;
 
 }
 
 .achiever .row .photo_wrap .photos .box .inner_photo .image img:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .achiever .row .photo_wrap .photos .box .inner_photo .image-content {
-    text-align: center;
+  text-align: center;
 }
 
 .achiever .row .photo_wrap .photos .box .inner_photo .image-content h3{
-    font-size: 2rem;
-    margin-top: 1.5rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
 }
 
 .achiever .row .photo_wrap .photos .box .inner_photo .image-content h3:hover{
-    color: red;
-    cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 .achiever .row .photo_wrap .photos .box .inner_photo .image-content span{
-    font-size: 1.8rem;
-    top: 1rem;
+  font-size: 1.8rem;
+  top: 1rem;
 
 }
 
-@media screen and (max-width:400px){
-  .achiever .row{
-    width: 52rem;
-  }
-
-  .achiever .row .inner_content h3{
-    font-size: 4.5rem;
-  }
-
-  .achiever .row .inner_content span{
-    font-size: 3rem;
-  }
-
-  .achiever .row .photo_wrap{
-    flex-wrap: wrap;
-    width: 41rem;
-  }
-
-
-
-}
-
-/* @media (max-width: 768px) {
-    .achiever .row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .achiever .row .inner_content {
-      margin: 2rem;
-    }
-  
-    .achiever .row .inner_content h3 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-  
-    .achiever .row .inner_content span {
-      font-size: 3rem;
-    }
-  
-    .achiever .row .photo_wrap {
-      margin: 5% auto;
-    }
-  
-    .achiever .row .photo_wrap .photos {
-      height: auto;
-      overflow-x: visible;
-      scroll-snap-type: none;
-      flex-wrap: wrap;
-    }
-  
-    .achiever .row .photo_wrap .photos .box {
-      grid-template-columns: 1fr;
-    }
-  
-    .achiever .row .photo_wrap #backBtn,
-    .achiever .row .photo_wrap #nextBtn {
-      display: none;
-    }
-  
-    .achiever .row .photo_wrap .photos .box .inner_photo {
-      margin-bottom: 3rem;
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .achiever .row .inner_content h3 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-  
-    .achiever .row .inner_content span {
-      font-size: 2.5rem;
-    }
-  
-    .achiever .row .photo_wrap .photos .box .inner_photo .image-content h3 {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-  
-    .achiever .row .photo_wrap .photos .box .inner_photo .image-content span {
-      font-size: 1.3rem;
-      top: 0.5rem;
-    }
-  } */
-  
-
-/* Styles for screens narrower than 480px */
-/* @media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .achiever .row {
-    flex-direction: column;
-    gap: 2rem;
-    margin-left: 0;
-    margin-right: 0;
     width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  .achiever .row .inner_content {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  .achiever .row .inner_content h3 {
+    font-size: 2.5rem;
+    margin-left: 0;
+  }
+
+  .achiever .row .inner_content span {
+    font-size: 1.5rem;
+    margin-left: 0;
   }
 
   .achiever .row .photo_wrap {
-    margin: 5% auto;
-  }
-
-  .achiever .row .photo_wrap .photos {
-    max-width: 100%;
-    height: auto;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .achiever .row .photo_wrap .photos .box {
-    grid-template-columns: auto;
-    grid-gap: 5px;
-    padding: 5px;
+    width: 100%;
+    margin-left: 0;
   }
 
   .achiever .row .photo_wrap .photos .box .inner_photo {
-    flex: none;
-    padding: 1rem;
+    height: 25rem;
+    width: 31rem;
   }
 
   .achiever .row .photo_wrap .photos .box .inner_photo .image img {
-    border-radius: 1rem;
+    width: 19rem;
   }
+  #backBtn{
+    display: none;
+  }
+  #nextBtn{
+    display: none;
+  }
+}
 
-  .achiever .row .photo_wrap .photos .box .inner_photo .image-content h3 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-  }
-
-  .achiever .row .photo_wrap .photos .box .inner_photo .image-content span {
-    font-size: 1.3rem;
-    top: 0.5rem;
-  }
-} */

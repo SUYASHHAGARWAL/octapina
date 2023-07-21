@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/registerchange.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div class="maincontainer">
+
+        <div class="box">
+            <div class="title-part">
+                <img src="/static/Images/biotic_logo.png">
+                <span>Edit UnRegistered</span>
+            </div>
+            <form class="register-form" action="/api/EEeditregistered">
+
+                <input type="hidden" name="idbb" value="{{data.id}}" />
+                <div class="input-area">
+                    <label for="username" class="form-label  labelstyle">USER Name</label>
+                    <input required type="text" name="username" value="{{data.username}}" class="form-control"
+                        id="username">
+                </div>
+                <div class="input-area">
+                    <label for="useremail" class="form-label  labelstyle">USER email</label>
+                    <input required type="text" name="useremail" value="{{data.useremail}}" class="form-control"
+                        id="useremail">
+                </div>
+                <div class="input-area">
+                    <label for="usermobile" class="form-label  labelstyle">USER Mobile</label>
+                    <input required type="text" name="usermobile" value="{{data.usermobile}}" class="form-control"
+                        id="usermobile">
+                </div>
+                <div class="input-area">
+                    <label for="usercity" class="form-label  labelstyle">USER City</label>
+                    <input required type="text" name="usercity" value="{{data.usercity}}" class="form-control"
+                        id="usercity">
+                </div>
+                <div class="input-area">
+                    <label for="userdob" class="form-label  labelstyle">USER DOB</label>
+                    <input required type="text" name="userdob" value="{{data.userdob}}" class="form-control"
+                        id="userdob">
+                </div>
+                <div class="input-area">
+                    <label for="usergender" class="form-label  labelstyle">USER Gender</label>
+                    <input required type="text" name="usergender" value="{{data.usergender}}" class="form-control"
+                        id="usergender">
+                </div>
+                <input type="hidden" name="guardiansname" value="{{data.guardiansname}}" />
+                <input type="hidden" name="guardiansphone" value="{{data.guardiansphone}}" />
+                <div class="input-area">
+                    <label for="userschool" class="form-label  labelstyle">USER School</label>
+                    <input required type="text" name="userschool" value="{{data.userschool}}" class="form-control"
+                        id="userschool">
+                </div>
+                <div class="input-area">
+                    <label for="userclass" class="form-label  labelstyle">USER Class</label>
+                    <input required type="text" name="userclass" value="{{data.userclass}}" class="form-control"
+                        id="userclass">
+                </div>
+                <div class="input-area">
+                    <label for="userpassword" class="form-label labelstyle">User password</label>
+                    <input required type="text" name="userpassword" value="{{data.userpassword}}" class="form-control"
+                        id="userpassword">
+
+                </div>
+                <div class="input-area">
+                    <label for="userbatch" class="form-label labelstyle">User Batch</label>
+                    <input required type="text" name="userbatch" value="{{data.userbatch}}" class="form-control"
+                        id="userbatch">
+
+                </div>
+                <div class="input-area">
+                    <label for="batch_purchased" class="form-label labelstyle">User Registered</label>
+                    <input required type="text" name="batch_purchased" value="{{data.batch_purchased}}"
+                        class="form-control" id="batch_purchased">
+                </div>
+
+                
+                <div class="button-area">
+                    <button  type="submit" value="edit" name="btn"
+                        class="btn btn-primary labelstyle">Edit</button>
+                </div>
+                <div class="button-area" >
+                    <button type="submit" name="btn" value="delete"
+                        class="btn btn-primary labelstyle " id="delete">Delete</button>
+                </div>
+                <div class="message-area" >
+                    <b>{{message}}</b>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biotic</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/static/CSS/navbar.css">
-    <link rel="stylesheet" href="/static/CSS/about.css">
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link rel="stylesheet" href="/static/CSS/feature.css">
+    <link rel="stylesheet" href="/static/CSS/testimonials.css">
     <link rel="stylesheet" href="/static/CSS/footer.css">
-
+    <link rel="stylesheet" href="/static/CSS/achiever.css">
+    <link rel="stylesheet" href="/static/CSS/batch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js" ></script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-<body>
 
-    <header>
+
+<script>
+
+        $(document).ready(function () {
+            
+          
+           
+                $.getJSON('/api/showbatchdetails',function(data){ 
+                    console.log(data)
+                    console.log(data.length)
+                    
+                    $('#section-display').css('display','block')
+                    $("#batchdetails").html('')
+
+                    for (i=0;i<data.length;i++){
+                        $('#batchdetails').append(`    <div class="batch-detail" >
+                        <div class="image-part">
+                    <img src="/static/Images/ambitionbatch.jpeg" alt="">
+                    <div class="over-img-part">
+                        <h1>Rs. ${data[i].BatchDfees}</h1>
+                        <div class="date-area">
+                            <i class="fa fa-calendar"></i>
+                            <p>Starts: ${data[i].startdate}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="batch-content-part" id="batchbtn" >
+                    <h2>Batch Name</h2>
+                    <span>${data[i].BatchName}</span>
+                    <a href="https://rzp.io/l/YxaGJRevx2"><button  class="admission">Take Admission</button></a>
+                </div>
+            </div>`
+                       )
+                    }
+            }) 
+        })
+
+
+       
+   
+                
+</script>
+<body>
+    <header id="header1">
         <div class="header_top">
             <div class="contact-info">
                 <a href="#" class="fas fa-phone"></a>
@@ -36,7 +102,8 @@
                 <a href="/api/biotichomepage"><img src="/static/Images/biotic_logo.png" alt=""></a>
             </div>
             <nav class="navbar">
-               
+                <a id="batch-link">Batch Section</a>
+                <a href="#">Features</a>
                 <a target="_blank" href="/api/resultspage">Results</a>
                 <a target="_blank" href="/api/testimonialspage">Testimonials</a>
                 <a  target="_blank" href="/api/aboutuspage">About Us</a>
@@ -50,66 +117,279 @@
         </div>
 
     </header>
-    <section class="about bg">
-        <div class="heading">
-            <h1>About us</h1>
-            <p>Welcome to BIOTIC NEET Coaching Institute, your pathway to success in the highly competitive National
-                Eligibility cum Entrance Test (NEET).</p>
-        </div>
-        <div class="container">
-            <section class="about">
-                <div class="about-image">
-                    <img src="/static/Images/about1" alt="">
-                </div>
-                <div class="about-content">
-                    <h2>Biotic</h2>
-                    <p>At BIOTIC, we provide comprehensive and top-notch coaching to aspiring medical professionals like
-                        you.</p>
-                    <p> Our coaching institute is renowned for its exceptional track record of producing outstanding
-                        results in NEET. With a team of experienced and highly qualified faculty members, we ensure that
-                        our students receive the best guidance and mentorship throughout their preparation journey.
-                    </p>
-                    <p>At BIOTIC NEET Coaching Institute, we understand the significance of a well-structured
-                        curriculum. Therefore, we have designed a meticulously crafted program that covers all the
-                        essential topics and concepts required for NEET. Our comprehensive study materials and resources
-                        are regularly updated to align with the latest NEET syllabus and exam patterns.
-                    </p>
-                    <p>
-                        We believe in the power of personalized attention, which is why we maintain small batch sizes to
-                        ensure individualized focus on each student. Our faculty members are not just teachers but also
-                        mentors who provide constant support and guidance to help students overcome their weaknesses and
-                        enhance their strengths.
-                    </p>
-                    <p>
-                        To foster a competitive environment, we conduct regular mock tests and practice sessions that
-                        simulate the actual NEET exam conditions. These assessments help students gauge their progress
-                        and identify areas that need improvement. Our performance analysis reports provide valuable
-                        insights to students and enable them to fine-tune their preparation strategies.
-                    </p>
-                    <p>
-                        Furthermore, at BIOTIC NEET Coaching Institute, we prioritize the holistic development of our
-                        students. Along with academic excellence, we also emphasise the development of critical
-                        thinking, problem-solving abilities, time management skills, and effective exam strategies. Our
-                        aim is to shape well-rounded individuals who are not only academically proficient but also
-                        equipped to excel in all aspects of their medical career.
-                    </p>
-                    <p>
-                        We take pride in our state-of-the-art infrastructure, including well-equipped classrooms, a
-                        comprehensive library, and advanced technology-enabled learning tools. Our friendly and
-                        supportive staff is always available to assist students and address their queries.
-                        Join BIOTIC NEET Coaching Institute and embark on a transformative learning experience. Let us
-                        guide you towards your dreams of becoming a successful medical professional. Enroll today and
-                        take the first step towards a bright future in medicine.
 
-                    </p>
-                    <a href="/login.html" class="login-in">Login / Register</a>
-                </div>
-            </section>
+    <section class="home" id="home">
+        <video autoplay muted plays-inline class="back-video">
+            <source src="/static/Images/bg_video4.mp4" type="video/mp">
+        </video>
+        <div class="content">
+            <h3>11800+ <span>MBBS Selections</span></h3>
+            <span>Medical entrance Simple है</span>
+            <span class="s1">with Biotic</span>
+            <p>A complete solution to your Medical Entrance Exam preparation.</p>
+            <p class="p1">Most trusted online and offline institute exclusively for NEET.</p>
+            <a href="/login.html" class="btn-1">LOGIN/SIGNUP</a>
+            <a href="#" class="btn-2">JOIN NOW</a>
         </div>
+
+        <div class="float_container">
+
+            <!-- <div class="floating_box1">
+                <img src="/static/Images/float_image1.png" alt="">
+                <div class="float_content">
+                    <h3>9.1 Lakh + years</h3>
+                    <span>Student assisted</span>
+                </div>
+            </div> -->
+
+            <div class="floating_box2">
+                <img src="/static/Images/float_image2.png" alt="">
+                <div class="float_content">
+                    <h3>7+ years</h3>
+                    <span>Trust of online presence</span>
+                </div>
+            </div>
+
+            <div class="floating_box3">
+                <img src="/static/Images/float_image3.png" alt="">
+                <div class="float_content">
+                    <h3>24+ years</h3>
+                    <span>Experience in Teaching</span>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <div class="bottom-banner">
+        <p>Download the Biotic app from:</p>
+        <a href="#" class="playstore-btn"><i class="fab fa-google-play"></i> Download on Play Store</a>
+    </div>
+
+    <section class="achiever">
+
+        <div class="row">
+            <div class="inner_content">
+                <h3>OUR ACHIEVERS🥇</h3>
+                <span>Everyone has a success story...</span>
+            </div>
+
+            <div class="photo_wrap">
+                <img src="/static/Images/backward.png" id="backBtn">
+                <div class="photos">
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="image">
+                                <img src="/static/Images/pic-9.png">
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="image">
+                                <img src="/static/Images/pic-2.jpg">
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="image">
+                                <img src="/static/Images/pic-3.jpg">
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="image">
+                                <img src="/static/Images/pic-4.jpg">
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="image">
+                                <img src="/static/Images/pic-5.jpg">
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    
+                <img src="/static/Images/forward.png" id="nextBtn">
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="feature-section">
+
+
+        <div class="feature-photu">
+            <img src="/static/Images/topper.png" alt="">
+
+        </div>
+
+        <div class="float_box">
+            <a href=""><i class="fa fa-youtube-play"></i></a>
+            <div class="text">Watch Us!</div>
+        </div>
+
+        <div class="feature-content">
+            <h3>OUR FEATURES</h3>
+            <h2>Join the Best Online Classes for NEET!</h2>
+            <div class="qualities">
+                <div class="core-quality">
+                    <div class="core-quality-icon" id="icon1">
+                        <img src="/static/Images/feature-icon-1.png" alt="">
+                    </div>
+                    <div class="core-quality-content">
+                        <h3>Ninja tranining for NEET</h3>
+                        <p>Our experienced educators provide comprehensive coaching programs for competitive exams and
+                            academic subjects, preparing students like ninjas for success.</p>
+                    </div>
+                </div>
+                <div class="core-quality">
+                    <div class="core-quality-icon" id="icon2">
+                        <img src="/static/Images/feature-icon-2.png" alt="">
+                    </div>
+                    <div class="core-quality-content">
+                        <h3>Best Atmosphere and Teaching </h3>
+                        <p>We focus on student-centric coaching, offering personalized attention, regular assessments,
+                            and state-of-the-art facilities for academic excellence.</p>
+                    </div>
+                </div>
+                <div class="core-quality">
+                    <div class="core-quality-icon" id="icon3">
+                        <img src="/static/Images/feature-icon-3.png" alt="">
+                    </div>
+                    <div class="core-quality-content">
+                        <h3>Achieve the height of success </h3>
+                        <p>Join us for transformative learning experiences, and get help as a top achiever to achieve
+                            academic success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="testimonials">
+
+        <div class="row">
+            <div class="inner_content">
+                <h3>TESTIMONIALS</h3>
+                <span>Our Commandos ❤️ Love us !</span>
+                <p>Many have praised our services and how we changed their lives . Hear what they have to say about
+                    us...</p>
+            </div>
+
+
+            <div class="photo_wrap">
+                <img src="/static/Images/backward.png" id="backBtn_1">
+                <div class="photos_1">
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>A place where students get all the study materials for NEET with Regular classes, doubt
+                                sessions ,Backup classes, Tests at regular intervals.. Not only objective but also
+                                subjective tests for preparation of CBSE/MP BOARD too.</p>
+                            <div class="user">
+                                <img src="/static/Images/customer1.jpg" alt="">
+                                <div class="user-info">
+                                    <h3>Harshu Shrivastava</h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <span class="fas fa-quote-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>This is the best coaching to go for by my own experience I can share that I was looking
+                                for a bio coaching and i ended up taking a wrong one in 11th class but as I joined
+                                biotic class in 12 Jyoti mam always helped me to complete my syllabus in 12 and she puts
+                                in so much effort for every single child and pays personal attention to every student.
+                                ❤️💟</p>
+                            <div class="user">
+                                <img src="/static/Images/customer2.jpg" alt="">
+                                <div class="user-info">
+                                    <h3>Shruti Mishra</h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <span class="fas fa-quote-right"></span>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="inner_photo">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>Such a wonderful Institute. The teaching style of ma'am is fabulous personally I feel it
+                                is a best biology Institute in gwalior.</p>
+                            <div class="user">
+                                <img src="/static/Images/customer3.jpg" alt="">
+                                <div class="user-info">
+                                    <h3>Abhishek Singh Imal</h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <span class="fas fa-quote-right"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <img src="/static/Images/forward.png" id="nextBtn_1">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="batch-container">
+        <h3>OUR ONLINE BATCHES</h3>
+        <h2>Find The Right Batch For You</h2>
+        <div class="batch-list">
+            <div id="batchdetails">
+
+            </div>
+           
     </section>
 
     <section class="footer">
-        <!-- <div class="floatingbox">START YOUR NEET COMMANDO TRAINING <br id="poppy">WITH US</BR></div> -->
             <div class="box-container">
 
                 <div class="b">
@@ -142,25 +422,28 @@
         
                 <div class="box" id="box1">
                     <h3>Quick Links</h3>
-                    <a>Home</a>
-                    <a>About Us</a>
-                    <a>In the NEWS</a>
-                    <a>Fees Package</a>
-                    <a>Features</a>
-                    <a>Careers</a>
-                    <a>Contact Us</a>
+                    <a href="/api/biotichomepage">Home</a>
+                    <a href="/api/aboutuspage">About Us</a>
+                    <a href="/api/biotichomepage">Features</a>
+                    <a href="/api/contactuspage">Contact Us</a>
                 </div>
                 <div class="box">
                     <h3>Other Links</h3>
-                    <a>Help?</a>
-                    <a>Our Results</a>
-                    <a>Testimonials</a>
-                    <a>Privacy Policy</a>
-                    <a>Terms & Conditions</a>
-                    <a>Disclaimers</a>
+
+                    <a href="/api/testimonialspage">Testimonials</a>
+                    <a href="/api/showprivacypolicy">Privacy Policy</a>
+                    <a href="/api/showtermsandconditions">Terms & Conditions</a>
                 </div>
             </div>
 
     </section>
-<script src="/static/JavaScript/navbar.js"></script>
+
+
+
+
 </body>
+
+    <script src="/static/JavaScript/app.js"></script>
+     <script src="/static/JavaScript/navbar.js"></script>
+   
+</html>

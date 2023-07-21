@@ -1,23 +1,11 @@
 const password_btn=document.querySelector('#pwd');
-const otp_btn=document.querySelector('#otp');
 const pwd_login=document.querySelector('#area1');
-const otp_login=document.querySelector('#area2');
 password_btn.addEventListener('click',()=>{
     password_btn.classList.remove('noneactive');
     password_btn.classList.add('activebtn');
-    otp_btn.classList.add('noneactive');
-    otp_btn.classList.remove('activebtn');
     pwd_login.style.display="block";
-    otp_login.style.display="none";
 })
-otp_btn.addEventListener('click',()=>{
-    password_btn.classList.add('noneactive');
-    password_btn.classList.remove('activebtn');
-    otp_btn.classList.remove('noneactive');
-    otp_btn.classList.add('activebtn');
-    pwd_login.style.display="none";
-    otp_login.style.display="block";
-})
+
 
 const flip_button=document.querySelector('.existinguser');
 const signinpage=document.querySelector('#sign-in-box');

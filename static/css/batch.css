@@ -135,4 +135,8 @@
     box-shadow: 0 8px 15px rgba(187, 21, 21, 0.85);
 }
 
-
+#batchdetails{
+    width: 78vw;
+    display: flex;
+    flex-wrap: wrap;
+}

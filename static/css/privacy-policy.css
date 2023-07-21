@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+.bg{
+    background: url("/static/Images/about.jpg") no-repeat center center/cover;
+
+}
+
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #4caf50;
+}
+
+.heading p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+.container{
+    
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.about-image{
+    flex: 1;
+    margin-right:40px ;
+    overflow: hidden;
+    margin-left: 20rem;
+    
+}
+.about-image img{
+    max-width: 80%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    transform: scale(1.2);
+}
+
+.about-content{
+    flex: 1;
+    background-color: rgba(244, 240, 240, 0.937);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: 8px;
+}
+.about-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.about-content .login-in{
+    font-size: .875rem;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(87deg,#5603ad 0,#9d03ad 100%)!important;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    color: white;
+    font-weight: 600;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 14px;
+}
+
+@media  screen and (max-width:768px){
+    .heading{
+        padding: 0 20px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .container{
+        padding: 0;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    .about-content p{
+        padding: 0;
+        font-size: 16px;
+    }
+    .about-content .login-in{
+        font-size: 16px;
+    }
+}

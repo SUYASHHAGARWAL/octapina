@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: .2s linear;
+}
+
+html{
+    font-size: 60%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body{
+    background: #5222d0;
+    background: linear-gradient(45deg,#5222d0 0%, #ec615b 100%);
+}
+
+.pricing-table{
+   
+    padding: 90px 20px;
+}
+.pricing-table .details{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: white;
+    font-weight: 600;
+}
+.pricing-table .details h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.pricing-table .details p{
+    font-size: 15px;
+}
+.pricing-table .grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 0px;
+    padding: 20px;
+}
+.pricing-table .grid .box{
+    width: 280px;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 5px rgba(0,0,0,0.05);
+    margin: 1px;
+    height: 50rem;
+
+}
+.pricing-table .grid .box .title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+}
+.price{
+    margin-bottom: 20px;
+}
+.price b{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.dpt .price b{
+    font-size: 16px;
+}
+.baits-video .price b{
+    font-size: 16px;
+}
+.price span{
+    font-size: 15px;
+}
+.features>*{
+    color: #555;
+    padding: 8px 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-size: 15px;
+    margin-bottom: 2rem;
+}
+.pricing-table .grid .box:hover{
+    transform: scale(1.1);
+
+    background: linear-gradient(to bottom, #e7e7e7, #e8bdff);
+    cursor: pointer;
+}
+
+.pricing-table .bottom-details{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: white;
+    font-weight: 600;
+}
+.pricing-table .bottom-details h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.pricing-table .bottom-details h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-decoration: line-through;
+    margin-top: 10px;
+    color: rgb(227, 226, 226);
+}
+.pricing-table .bottom-details p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+@media(max-width:804px){
+    .pricing-table .grid{
+        gap: 20px;
+    }
+    .box:hover{
+        transform: scale(1);
+    }
+}

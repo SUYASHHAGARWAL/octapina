@@ -139,10 +139,19 @@ header .header_bottom .login_button a:hover{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url('/static/Images/main_bg8.png') no-repeat;
+    /* background: url('/static/Images/main_bg8.png') no-repeat; */
     background-size: cover;
     background-position: center;
 }
+
+.home .back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100vh;
+}
+
 
 .home .content{
     max-width: 50rem;
@@ -250,7 +259,7 @@ header .header_bottom .login_button a:hover{
 }
 
 
-.home .floating_box1{
+/* .home .floating_box1{
     display: flex;
     background-color: #fff;
     gap: 1.5rem;
@@ -264,7 +273,7 @@ header .header_bottom .login_button a:hover{
     transition: animation 10s;
     position: relative;
     box-shadow: 0 8px 15px rgba(255, 173, 72, 0.85);
-}
+} */
 
  .home .floating_box2{
     display: flex;
@@ -273,12 +282,14 @@ header .header_bottom .login_button a:hover{
     gap: 1.5rem;
     border-radius: 1rem;
     width: 200px;
-    margin-top: 10rem;
+    margin-top: 20rem;
     margin-left: 10rem;
     animation: float_boxnew 8s;
     animation-iteration-count: infinite;
     transition: animation 8s;
-    position: relative;
+    position: absolute;
+    top: 48%;
+    right: 36%;
     box-shadow: 0 8px 15px rgba(255, 173, 72, 0.85);
     
 }
@@ -289,13 +300,14 @@ header .header_bottom .login_button a:hover{
     padding: 1rem;
     gap: 1.5rem;
     border-radius: 1rem;
-    margin-top: 10rem;
+    margin-top: 13rem;
     width: 200px;
     margin-left: 15rem;
     animation: float_boxnew 8s;
     animation-iteration-count: infinite;
     transition: animation 8s;
-    position: relative;
+    position: absolute;
+    right: 36%;
     box-shadow: 0 8px 15px rgba(255, 173, 72, 0.85);
    
 }
@@ -340,8 +352,23 @@ header .header_bottom .login_button a:hover{
     transform: scale(1.1);
 }
 
+@media(min-width:1400px){
+    .home .float_container{
+        margin-left: 60rem;
+    }
+}
 
+@media(min-width:1300px){
 
+    .home{
+        background: url(/static/Images/main_bg9.png)no-repeat center center/cover;
+    }
+    .home .back-video{
+        display: none;
+       
+    }
+
+}
 
 
 @media(max-width:991px){
@@ -363,7 +390,7 @@ header .header_bottom .login_button a:hover{
     }
 
     .home{
-        background-position: left;
+        background: url(/static/Images/main_bg11.png)no-repeat center/cover;
     }
 
     header .header_top{
@@ -395,6 +422,9 @@ header .header_bottom .login_button a:hover{
         background: #fff;
         border: .1rem solid rgba(0,0,0,.1);
         display: block;
+    }
+    .home .float_container{
+        display: none;
     }
 
 }

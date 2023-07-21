@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/admin.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+</head>
+<script>
+   $(document).ready(function () {
+            
+          
+            $('#showregisteredbtn').click(function () {
+                $.getJSON('/api/registeredstudents',function(data){ 
+                    console.log(data)
+                    console.log(data.length)
+                    $('#section-display').css('display','block')
+                    $("#tablebody").html('')
+
+                    for (i=0;i<data.length;i++){
+                        $('#tablebody').append(`<tr>
+                      <th scope="row">${i+1}</th>
+                         <td>${data[i].username}</td>
+                          <td>${data[i].userbatch}</td>
+                         <td>${data[i].userdob}</td>
+                         <td>${data[i].usercity}/${data[i].date_month}/${data[i].date_year}</td>
+                         <td>${data[i].batch_purchased}</td>
+                         <td><a href="/api/editregisteredentry?id=${data[i].id}">edit/delete</a></td>
+                       </tr>`
+                       )
+                    }
+            }) 
+        })
+
+
+        $('#showunregisteredbtn').click(function () {
+                $.getJSON('/api/unregisteredstudents',function(data){ 
+                    console.log(data)
+                    console.log(data.length)
+                    
+                    $('#section-display').css('display','block')
+                    $("#tablebody2").html('')
+
+                    for (i=0;i<data.length;i++){
+                        $('#tablebody2').append(`<tr>
+                          <th scope="row">${i+1}</th>
+                         <td>${data[i].username}</td>
+                          <td>${data[i].userbatch}</td>
+                         <td>${data[i].userdob}</td>
+                         <td>${data[i].usercity}/${data[i].date_month}/${data[i].date_year}</td>
+                         <td>${data[i].batch_purchased}</td>
+                         <td><a href="/api/editregisteredentry?id=${data[i].id}">edit/delete</a></td>
+                       </tr>`
+                       )
+                    }
+            }) 
+        })
+
+        $('#showbatches').click(function () {
+                $.getJSON('/api/showbatchdetails',function(data){ 
+                    console.log(data)
+                    console.log(data.length)
+                    
+                    $('#section-display').css('display','block')
+                    $("#tablebody3").html('')
+
+                    for (i=0;i<data.length;i++){
+                        $('#tablebody3').append(`<tr>
+                          <th scope="row">${i+1}</th>
+                         <td>${data[i].BatchName}</td>
+                          <td>${data[i].Batchfees}</td>
+                         <td>${data[i].BatchDfees}</td>
+                         <td>${data[i].startdate}</td>
+                         <td>${data[i].duration}</td>
+                         <td><a href="/api/batchedit?id=${data[i].id}">edit/delete</a></td>
+                       </tr>`
+                       )
+                    }
+            }) 
+        })
+
+        $('#showevents').click(function () {
+                $.getJSON('/api/showeventdetails',function(data){ 
+                    console.log(data)
+                    console.log(data.length)
+                    
+                    $('#section-display').css('display','block')
+                    $("#tablebody4").html('')
+
+                    for (i=0;i<data.length;i++){
+                        $('#tablebody4').append(`<tr>
+                          <th scope="row">${i+1}</th>
+                         <td>${data[i].eventdate}</td>
+                          <td>${data[i].eventname}</td>
+                         <td>${data[i].eventtime}</td>
+                         <td>${data[i].organiser}</td>
+                         <td>${data[i].eventlevel}</td>
+                         <td><a href="/api/eventedit?id=${data[i].id}">edit/delete</a></td>
+                       </tr>`
+                       )
+                    }
+            }) 
+        })
+        $('#shoemessages').click(function () {
+                $.getJSON('/api/contactmessages',function(data){ 
+                    console.log(data)
+                    console.log(data.length)
+                    
+                    $('#section-display').css('display','block')
+                    $("#tablebody5").html('')
+
+                    for (i=0;i<data.length;i++){
+                        $('#tablebody5').append(`<tr>
+                          <th scope="row">${i+1}</th>
+                         <td>${data[i].username}</td>
+                          <td>${data[i].email}</td>
+                         <td>${data[i].mobile}</td>
+                         <td>${data[i].message}</td>
+                         <td><a href="/api/contactedit?id=${data[i].id}">delete</a></td>
+                       </tr>`
+                       )
+                    }
+            }) 
+        })
+    })
+</script>
+
+<body>
+  
+  <header>
+    <h1>Admin Panel</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <!-- <li><a href="#dashboard" onclick="toggleDashboard()">Dashboard</a></li> -->
+      <li><button class="btn" id="showregisteredbtn">Registered Users</button>
+        <div class="table-part none1" >
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Batch</th>
+                <th>Date of birth</th>
+                <th>User city</th>
+                <th>Paid</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody">
+
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li><button class="btn" id="showunregisteredbtn">Unpaid Students</button>
+        <div class="table-part none1">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Batch</th>
+                <th>Date of birth</th>
+                <th>User city</th>
+                <th>Paid</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody2">
+            
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <!-- <li><a href="#content-management">Content Management</a></li> -->
+      <li><button class="btn" id="showbatches">Batch Lists</button>
+        <div class="table-part none1">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Batch Name</th>
+                <th>Batch Fees</th>
+                <th>Discounted fees</th>
+                <th>Start date</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody3">
+              
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li><button class="btn" id="showevents">Upcoming Events</button>
+        <div class="table-part none1">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Time</th>
+                <th>Organiser</th>
+                <th>Event Level</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody4">
+              
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li><button class="btn" id="shoemessages">Messages</button>
+        <div class="table-part none1">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody5">
+              
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <!-- <li><a href="#communication-support">Communication & Support</a></li>
+      <li><button class="btn">Analytics & Reporting</button></li>
+      <li><a href="#marketing-promotions">Marketing & Promotions</a></li>
+      <li><button class="btn">Website Settings</button></li> -->
+    </ul>
+  </nav>
+
+
+
+  <!-- Other sections go here -->
+
+  <script src="/static/JavaScript/admin.js"></script>
+</body>
+
+</html>

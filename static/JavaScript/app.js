@@ -39,3 +39,16 @@ new_backBtn.addEventListener("click",()=>{
     new_scrollContainer.scrollLeft -= 500;
 });
   
+const batch=document.getElementById('batch-link');
+console.log(batch,"hello");
+
+batch.addEventListener('click',()=>{
+    // window.location.href='/Templates/home.html';
+        window.scrollTo({
+            top: document.querySelector(".batch-container").offsetTop-80,
+            left: 0,
+            behavior: "smooth",
+          });
+
+    
+})

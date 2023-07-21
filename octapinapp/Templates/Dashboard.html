@@ -3,13 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+
+    <script>
+         $(document).ready(function () {
+                $.getJSON('/api/showeventdetails',function(data){ 
+                    console.log(data)
+                    console.log(data.length)
+                    
+                    $('#section-display').css('display','block')
+                    $("#tablebody").html('')
+
+                    for (i=0;i<data.length;i++){
+                        $('#tablebody').append(`<tr>
+                          <th scope="row">${i+1}</th>
+                         <td>${data[i].eventdate}</td>
+                          <td>${data[i].eventname}</td>
+                         <td>${data[i].eventtime}</td>
+                         <td>${data[i].organiser}</td>
+                         <td>${data[i].eventlevel}</td>
+                       </tr>`
+                       )
+                    }
+            }) 
+        })
+        
+    
+    </script>
 </head>
 <body>
-    <h1>DashBoard</h1>
-<h1>{{message}}</h1>
-<h5>
-    {{record}}
-</h5>
+   <div class="sidebar">
+    <ul class="items">
+        <li class="active">
+            <a href="" >
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" id="profile-link">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            
+        </li>
+        <li>
+            <a href="" class="mat">
+                <i class="material-icons">assignment</i>
+                <span>Assignment</span>
+            </a>
+        </li>
+        <li>
+            <a href="" class="mat">
+                <i class="material-icons">notes</i>
+                <span>Notes</span>
+            </a>
+        </li>
+        <li>
+            <a href="" class="mat">
+                <i class="fas fa-user"></i>
+                <span>Complete profile</span>
+            </a>
+        </li>
+        <li class="logout">
+            <a href="">
+                <i class="fas fa-sign-out-alt"></i>
+                <span><a href="/api/biotichomepage">Log out</a></span>
+            </a>
+        </li>
+    </ul>
+   </div>
+   <div class="main--content">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <span>Welcome</span>
+            <h2>{{record.username}}</h2>
+        </div>
+        <div class="user-info">
+            <div class="search-box">
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="search">
+            </div>
+            <img src="/static/Images/biotic_logo.png" alt="">
+            <!-- <img src="./biotic_logo.png" alt=""> -->
+        </div>
+    </div>
+       <div class="card-container">
+        <h3 class="main-title">Student's Section</h3>
+        <div class="card-wrapper">
+            <div class="card-1 light-red">
+                <div class="card-header">
+                    <div class="card-1-data">
+                        <span class="title">Batch</span>
+                        <span class="amount-value">{{record.userbatch}}</span>
+                    </div>
+                    <i class="fas fa-dollar-sign icon"></i>
+                </div>
+                <!-- <span class="card-detail">**extra-detail-here**</span> -->
+            </div>
+
+            <div class="card-1 light-purple" id="profilebtn">
+                <div class="card-header" >
+                    <div class="card-1-data" >
+                        <span class="title">click here</span>
+                        <span class="amount-value">Profile</span>
+                    </div>
+                    <i class="fas fa-list icon dark-purple"></i>
+                </div>
+            </div>
+
+            <div class="card-1 light-green">
+                <div class="card-header">
+                    <div class="card-1-data">
+                        <span class="title">click here</span>
+                        <span class="amount-value">Assignments</span>
+                    </div>
+                    <i class="fas fa-users icon dark-green"></i>
+                </div>
+                
+            </div>
+
+            <div class="card-1 light-blue">
+                <div class="card-header">
+                    <div class="card-1-data">
+                        <span class="title">click here</span>
+                        <span class="amount-value">Notes</span>
+                    </div>
+                    <i class="fas fa-check icon dark-blue"></i>
+                </div>
+            </div>
+        </div>
+       </div>
+
+       <div class="tabular-wrapper">
+           <h3 class="main-title">Upcomming Events</h3>
+           <div class="table-container">
+            <table>   
+            <thead>
+                <tr>
+                    <th>S. No</th>
+                    <th>Date </th>
+                    <th>Chemistry</th>
+                    <th>Event time</th>
+                    <th>Event Organiser</th>
+                    <th>Event Level</th>
+
+                </tr>
+
+                <tbody id="tablebody">
+                    
+                </tbody>
+            </thead>
+        </table>
+        </div>
+       </div>
+   </div>
+
+   <div id="profile-modal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Profile Details</h3>
+        <p>Name: {{record.username}}</p>
+        <p>Contact: {{record.usermobile}}</p>
+        <p>city: {{record.usercity}}</p>
+        <p>Password: {{record.userpassword}}</p>
+        <p>Batch: {{record.userbatch}}</p>
+        </div>
+    </div>
+
+   <script src="/static/JavaScript/dashboard.js"></script>
 </body>
 </html>

@@ -19,3 +19,24 @@ class NewUserData(models.Model):
     userschool = models.CharField(max_length=120,blank=False,default='')
     userclass = models.CharField(max_length=120,blank=False,default='')
     userpassword = models.CharField(max_length=30,blank=False,default='')
+    userbatch = models.CharField(max_length=200,blank=False,default='')
+    batch_purchased = models.CharField(max_length=10,blank=False,default='')
+
+class BatchInfo(models.Model):
+    BatchName = models.CharField(max_length=100,blank=False,default='')
+    Batchfees = models.CharField(max_length=12,blank=False,default='')
+    BatchDfees = models.CharField(max_length=12,blank=False,default='')
+    duration = models.CharField(max_length=12,blank=False,default='')
+    startdate = models.CharField(max_length=15,blank=False,default='')
+
+class admin(models.Model):
+    mobilenum = models.CharField(max_length=12,blank=False,default='')
+    adminname = models.CharField(max_length=50,blank=False,default='')
+    password = models.CharField(max_length=42,blank=False,default='')
+
+class Events(models.Model):
+    eventdate = models.CharField(max_length=20,blank=False,default='')
+    eventname = models.CharField(max_length=80,blank=False,default='')
+    eventtime = models.CharField(max_length=20,blank=False,default='')
+    organiser = models.CharField(max_length=20,blank=False,default='')
+    eventlevel = models.CharField(max_length=30,blank=False,default='')

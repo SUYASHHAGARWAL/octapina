@@ -29,6 +29,23 @@ urlpatterns = [
     re_path(r'^api/aboutuspage',views.AboutUsPage),
     re_path(r'^api/testimonialspage',views.TestimonialsPage),
     re_path(r'^api/resultspage',views.ResultsPage),
+    re_path(r'^api/showadminpage',views.AdminPage),
+    re_path(r'^api/registeredstudents',views.ShowRegisteredStudents),
+    re_path(r'^api/unregisteredstudents',views.ShowUnRegisteredStudents),
+    re_path(r'^api/batchdetails',views.Batchdetails),
+    re_path(r'^api/showbatchdetails',views.batch),
+    re_path(r'^api/showeventdetails',views.Events),
+    re_path(r'^api/editregisteredentry',views.Editregistered),
+    re_path(r'^api/EEeditregistered',views.EDITRegistered),
+    re_path(r'^api/batchedit',views.BatchEdit),
+    re_path(r'^api/batchsave',views.BatchEditSave),
+    re_path(r'^api/eventedit',views.EventEdit),
+    re_path(r'^api/qsaveeventedit',views.EventEditSave),
+    re_path(r'^api/showtermsandconditions',views.ShowTnC),
+    re_path(r'^api/showprivacypolicy',views.PrivacyPolicy),
+    re_path(r'^api/showtestseries',views.TestSeriesPage),
+    re_path(r'^api/contactmessages',views.ContactMessages),
+    re_path(r'^api/contactedit',views.ContactEdit),
 
 
 ]

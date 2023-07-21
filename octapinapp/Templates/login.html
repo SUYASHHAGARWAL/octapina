@@ -30,8 +30,8 @@
                 var psw = $('#password').val();
                 
                 console.log(phn,psw)
-                $.getJSON('http://localhost:8000/api/datainsession',{mobile:phn,password:psw},function(data){ 
-                    window.location.href = `http://localhost:8000/api/checkuserlogin?mobile=${phn}&password=${psw}`
+                $.getJSON('/api/datainsession',{mobile:phn,password:psw},function(data){ 
+                    window.location.href = `/api/checkuserlogin?mobile=${phn}&password=${psw}`
             }) 
         })
     })
@@ -79,19 +79,19 @@
     <div class="login-signup-page">
         <div class="login_signup_box" id="login-box1">
             <div class="login-box">
-                <div class="mail-login">
+                <!-- <div class="mail-login">
                     <h4>Log in With</h4>
                     <button class="gmail">
                         <img src="/static/Images/google.png" alt="">
                         Gmail
                     </button>
-                </div>
+                </div> -->
                 <hr>
                 <div class="credentials">
-                    <h4>or Log in with</h4>
+                    <h4>Log in with</h4>
                     <div class="change-btn-class">
                         <button class="change_btns activebtn" id="pwd">Password</button>
-                        <button class="change_btns noneactive" id="otp">OTP</button>
+                        <!-- <button class="change_btns noneactive" id="otp">OTP</button> -->
                     </div>
     
                     <div class="credential-area" id="area1">
@@ -99,10 +99,10 @@
                         <input type="password" placeholder="Password" id="password" required></input>
                         <button class="login-btn" id="pswlogin">Login</button>
                     </div>
-                    <div class="credential-area" id="area2">
+                    <!-- <div class="credential-area" id="area2">
                         <input type="number" placeholder="Contact No." required></input>
                         <button class="login-btn" id="otplogin">Login</button>
-                    </div>
+                    </div> -->
                     
                 </div>
             </div>
@@ -218,22 +218,17 @@
         
                 <div class="box" id="box1">
                     <h3>Quick Links</h3>
-                    <a>Home</a>
-                    <a>About Us</a>
-                    <a>In the NEWS</a>
-                    <a>Fees Package</a>
-                    <a>Features</a>
-                    <a>Careers</a>
-                    <a>Contact Us</a>
+                    <a href="/api/biotichomepage">Home</a>
+                    <a href="/api/aboutuspage">About Us</a>
+                    <a href="/api/biotichomepage">Features</a>
+                    <a href="/api/contactuspage">Contact Us</a>
                 </div>
                 <div class="box">
                     <h3>Other Links</h3>
-                    <a>Help?</a>
-                    <a>Our Results</a>
-                    <a>Testimonials</a>
-                    <a>Privacy Policy</a>
-                    <a>Terms & Conditions</a>
-                    <a>Disclaimers</a>
+
+                    <a href="/api/testimonialspage">Testimonials</a>
+                    <a href="/api/showprivacypolicy">Privacy Policy</a>
+                    <a href="/api/showtermsandconditions">Terms & Conditions</a>
                 </div>
             </div>
 
