@@ -61,7 +61,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://localhost:8000',
-    'https://13.236.184.75',
+    'https://89.117.188.103',
 ]
 
 ROOT_URLCONF = 'octapin.urls'
