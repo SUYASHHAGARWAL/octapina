@@ -71,7 +71,7 @@ ROOT_URLCONF = 'octapin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(MAIN_DIR,'Templates'),],
+        'DIRS': [os.path.join(MAIN_DIR,'octapinapp/Templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
