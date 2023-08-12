@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os 
-from dotenv import load_dotenv
-load_dotenv('./built.env')
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,7 +91,7 @@ WSGI_APPLICATION = 'octapin.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-     'default': { 'ENGINE': 'django.db.backends.mysql', 'NAME': os.environ.get('NAME'), 'USER': os.environ.get('USER'), 'PASSWORD': os.environ.get('PASSWORD'), 'HOST': os.environ.get('HOST'), 'PORT': os.environ.get('PORT'), } 
+     'default': { 'ENGINE': 'django.db.backends.mysql', 'NAME': 'railway', 'USER': 'root', 'PASSWORD': 'MWiPX20zhk8TIHJKdt72', 'HOST': 'containers-us-west-207.railway.app', 'PORT': '7114', } 
 }
 
 
