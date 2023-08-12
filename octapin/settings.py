@@ -32,6 +32,14 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000',
+    'http://localhost:8000',
+    'https://89.117.188.103',
+    'https://13.236.184.75',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -56,14 +64,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ORIGIN_WHITELIST = [
-    'http://127.0.0.1:8000',
-    'http://localhost:8000',
-    'https://89.117.188.103',
-    'https://13.236.184.75',
 ]
 
 ROOT_URLCONF = 'octapin.urls'
