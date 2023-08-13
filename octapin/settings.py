@@ -38,7 +38,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://localhost:8000',
     'https://89.117.188.103',
     'https://13.236.184.75',
-    'https://54.206.143.156/',
+    'https://54.206.143.156',
 ]
 
 INSTALLED_APPS = [
