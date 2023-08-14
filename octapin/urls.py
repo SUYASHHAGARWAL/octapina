@@ -18,7 +18,7 @@ from django.urls import path,re_path
 from octapinapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^api/biotichomepage',views.LandingPage),
+    re_path(r'',views.LandingPage),
     re_path(r'^api/contactuspage',views.ContactPage),
     re_path(r'^api/contactuspage',views.ContactPage),
     re_path(r'^api/contactusdetails',views.SaveContactusdetails),
